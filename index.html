@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Journal</title>
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -13,19 +14,13 @@
     <main>
         <h2>Daily Journal</h2>
         <form action="">
-            <fieldset>
+            <fieldset id="entry-form">
                 <label for="journalDate">Date of Entry</label>
                 <input type="date" name="journalDate" id="journalDate">
-            </fieldset>
-            <fieldset>
                 <label for="journalConcepts">Concepcts Covered</label>
                 <input type="text" name="journalConcepts" id="journalConcepts">
-            </fieldset>
-            <fieldset>
                 <label for="journalEntry">Journal Entry</label>
                 <textarea name="journalEntry" id="journalEntry" cols="30" rows="2"></textarea>
-            </fieldset>
-            <fieldset>
                 <label for="journalMood">Mood for the Day</label>
                 <select name="journalMood" id="journalMood">
                     <option value="happy">Happy</option>
@@ -33,7 +28,7 @@
                     <option value="sad">Sad</option>
                 </select>
             </fieldset>
-            <button type="button">
+            <button type="button" id="submit-form">
                 Record Journal Entry
             </button>
         </form>
