@@ -41,3 +41,35 @@ body {
     border: none;
     padding: 10px;
 }
+
+#entryLog {
+    display: flex;
+    flex-flow: column wrap; 
+}
+
+.entry {
+    border: 5px solid black;
+    padding: 25px;
+    margin: 25px 0;
+}
+
+.entry h2 {
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    margin: 0;
+}
+
+.entry--date {
+    color: tomato;
+}
+
+.entry--body {
+    margin-bottom: 10px;
+}
+
+.entry--mood {
+    color: tomato;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-weight: bold;
+}
