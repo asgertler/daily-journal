@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,39 +9,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
     <script type="module" src="./js/main.js"></script>
 </head>
-<body>
-    <header>
 
-    </header>
-    <main>
-        <h1>Daily Journal</h1>
-        <form action="">
-            <fieldset id="entry-form">
-                <label for="journalDate">Date of Entry</label>
-                <input type="date" name="journalDate" id="journalDate">
-                <label for="journalConcepts">Concepcts Covered</label>
-                <input type="text" name="journalConcepts" id="journalConcepts">
-                <label for="journalEntry">Journal Entry</label>
-                <textarea name="journalEntry" id="journalEntry" cols="30" rows="2"></textarea>
-                <label for="journalMood">Mood for the Day</label>
-                <select name="journalMood" id="journalMood">
-                    <option value="happy">Happy</option>
-                    <option value="fine">Fine</option>
-                    <option value="sad">Sad</option>
-                </select>
-            </fieldset>
-            <button type="button" id="submit-form">
-                Record Journal Entry
-            </button>
-        </form>
+<body>
+    <header></header>
+
+    <main id="eventHub">
+        <section id="entryForm"></section>
+
+        <section id="entryLog"></section>
     </main>
 
-    <section id="entryLog">
-
-    </section>
-
-    <footer>
-        
-    </footer>
+    <footer></footer>
 </body>
+
 </html>

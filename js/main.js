@@ -1,3 +1,5 @@
-import {EntryListComponent} from "./JournalEntryList.js";
+import { JournalForm } from './JournalForm.js'
+import { JournaList } from "./JournalEntryList.js"
 
-EntryListComponent();
+JournalForm()
+JournaList()
