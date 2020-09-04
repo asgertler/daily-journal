@@ -1,3 +1,3 @@
-#Aaron's Daily Journal
+# Aaron's Daily Journal
 
 Info coming soon...
