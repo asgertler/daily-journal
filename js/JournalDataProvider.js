@@ -1,31 +1,35 @@
-const journal = [
-    {
-        id: 1,
-        date: "07.24.2025",
-        concept: "HTML & CSS",
-        entry: "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-        mood: "Ok"
-    },
-    {
-        id: 2,
-        date: "07.25.2025",
-        concept: "Github",
-        entry: "Started backing our projects up to Github to prepare for a group project.",
-        mood: "Ok"
-    },
-    {
-        id: 3,
-        date: "07.26.2025",
-        concept: "JavaScript",
-        entry: "Started digging into JS and importing content into HTML files.",
-        mood: "Ok"
-    }
-];
+let journal = []
 
-export const useJournalEntries = () => {
-    const sortedByDate = journal.sort(
-        (currentEntry, nextEntry) =>
-            Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
-    )
-    return sortedByDate
-};
+const eventHub = document.querySelector("#eventHub")
+
+const dispatchStateChangeEvent = () => {
+    const journalStateChangedEvent = new CustomEvent("journalStateChanged")
+
+    eventHub.dispatchEvent(journalStateChangedEvent)
+}
+
+export const getEntries = () => {
+    return fetch('http://localhost:8088/entries') // Fetch from the API
+        .then(response => response.json())
+        .then(parsedEntries => {
+            journal = parsedEntries
+        })
+}
+
+export const useEntries = () => {
+    return journal.slice()
+}
+
+export const saveEntry = entryObj => {
+    return fetch('http://localhost:8088/entries', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(entryObj)
+    })
+        .then(() => {
+            return getEntries()
+        })
+        .then(dispatchStateChangeEvent)
+}

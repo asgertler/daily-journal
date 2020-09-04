@@ -1,24 +1,75 @@
 body {
     font-family: 'Alata', sans-serif;
+    margin: 0;
+    padding: 50px;
 }
 
-#entry-form {
+#entryForm {
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
+    justify-content: flex-end;
     background-color: tomato;
-    border: none;
-    margin: 0 0 10px 0;
+    margin: 0 0 25px 0;
+    padding: 25px;
 }
 
-#submit-form {
-    background-color: slategray;
+#entry--title {
+    flex-basis: 100%;
+    margin-bottom: 10px;
     border: none;
+    padding: 10px;
+}
+
+#entry--body {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+    border: none;
+    padding: 10px;
+}
+
+#entry--mood {
     color: white;
+    background-color: rgba(0, 0, 0, .4);
+    border: none;
+    margin-right: 10px;
     padding: 10px;
 }
 
-.journalEntry {
-    border: 2px solid tomato;
+#saveEntry {
+    color: white;
+    background-color: rgba(0, 0, 0, .4);
+    border: none;
     padding: 10px;
-    margin: 10px 0 10px 0;
+}
+
+#entryLog {
+    display: flex;
+    flex-flow: column wrap; 
+}
+
+.entry {
+    border: 5px solid black;
+    padding: 25px;
+    margin: 25px 0;
+}
+
+.entry h2 {
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    margin: 0;
+}
+
+.entry--date {
+    color: tomato;
+}
+
+.entry--body {
+    margin-bottom: 10px;
+}
+
+.entry--mood {
+    color: tomato;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-weight: bold;
 }
