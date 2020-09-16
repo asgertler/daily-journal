@@ -14,6 +14,7 @@ body {
 }
 
 .entry {
+    color: darkslategray;
     border: 5px solid lightgray;
     padding: 25px;
     margin: 0 0 25px 0;
@@ -28,16 +29,11 @@ body {
     margin: 0;
 }
 
-.entry--date {
-    color: tomato;
-}
-
 .entry--body {
     margin-bottom: 10px;
 }
 
 .entry--mood {
-    color: tomato;
     text-transform: uppercase;
     letter-spacing: .1em;
     font-weight: bold;
