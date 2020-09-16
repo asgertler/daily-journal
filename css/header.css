@@ -22,6 +22,7 @@ header {
     font-size: medium;
     text-transform: uppercase;
     margin: 0;
+    padding-bottom: 18px;
 }
 
 #logoContainer img {
@@ -41,6 +42,10 @@ header {
     text-align: right;
     font-size: large;
     margin: 0;
+}
+
+#socialIcons a {
+    text-decoration: none;
 }
 
 #socialIcons img {
