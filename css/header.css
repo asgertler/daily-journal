@@ -1,0 +1,30 @@
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 25px;
+}
+
+#headerBranding {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+    align-items: center;
+}
+
+#headerBranding h1 {
+    font-size: xx-large;
+    margin: 0;
+}
+
+#headerBranding h2 {
+    font-size: medium;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+#logoContainer img {
+    height: 100px;
+    width: auto;
+    border-radius: 25px;
+    margin-right: 25px;
+}
