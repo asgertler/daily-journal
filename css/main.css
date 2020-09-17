@@ -34,7 +34,12 @@ body {
 }
 
 .entry--mood {
+    text-align: center;
+    line-height: 50px;
     text-transform: uppercase;
     letter-spacing: .1em;
     font-weight: bold;
+    color: white;
+    background-color: darkslategray;
+    height: 50px;
 }
