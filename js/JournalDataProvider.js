@@ -39,4 +39,5 @@ export const deleteEntry = entryId => {
         method: "DELETE"
     })
         .then(getEntries)
+        .then(dispatchStateChangeEvent)
 }
