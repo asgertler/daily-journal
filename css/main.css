@@ -1,45 +1,11 @@
+@import 'header.css';
+@import 'entryForm.css';
+
 body {
     font-family: 'Alata', sans-serif;
     margin: 0;
     padding: 50px;
-}
-
-#entryForm {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-end;
-    background-color: tomato;
-    margin: 0 0 25px 0;
-    padding: 25px;
-}
-
-#entry--title {
-    flex-basis: 100%;
-    margin-bottom: 10px;
-    border: none;
-    padding: 10px;
-}
-
-#entry--body {
-    flex-basis: 100%;
-    margin-bottom: 10px;
-    border: none;
-    padding: 10px;
-}
-
-#entry--mood {
-    color: white;
-    background-color: rgba(0, 0, 0, .4);
-    border: none;
-    margin-right: 10px;
-    padding: 10px;
-}
-
-#saveEntry {
-    color: white;
-    background-color: rgba(0, 0, 0, .4);
-    border: none;
-    padding: 10px;
+    border: 10px solid lightgray;
 }
 
 #entryLog {
@@ -48,9 +14,13 @@ body {
 }
 
 .entry {
-    border: 5px solid tomato;
+    color: darkslategray;
+    border: 5px solid lightgray;
     padding: 25px;
-    margin: 25px 0;
+    margin: 25px 0 0 0;
+    -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .5);
+	   -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .5);
+	        box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .5);
 }
 
 .entry h2 {
@@ -59,17 +29,36 @@ body {
     margin: 0;
 }
 
-.entry--date {
-    color: tomato;
+.entry--body {
+    margin-bottom: 25px;
 }
 
-.entry--body {
-    margin-bottom: 10px;
+.entry--bottom {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 }
 
 .entry--mood {
-    color: tomato;
+    text-align: center;
+    line-height: 25px;
     text-transform: uppercase;
     letter-spacing: .1em;
     font-weight: bold;
+    color: white;
+    background-color: darkslategray;
+    padding: 10px;
+    flex-grow: 8;
+}
+
+.entry button {
+    color: black;
+    background-color: lightgray;
+    border: none;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.entry button:hover {
+    background-color: gray;
 }
