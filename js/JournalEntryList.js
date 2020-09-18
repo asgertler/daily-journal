@@ -1,4 +1,4 @@
-import { getEntries, useEntries } from './JournalDataProvider.js'
+import { getEntries, useEntries, deleteEntry } from './JournalDataProvider.js'
 import { JournalHTMLConverter } from './JournalEntry.js'
 
 const eventHub = document.querySelector("#eventHub")
@@ -19,4 +19,17 @@ export const JournaList = () => {
 eventHub.addEventListener("journalStateChanged", () => {
     const newEntries = useEntries()
     render(newEntries)
+})
+
+eventHub.addEventListener("click", event => {
+    if (event.target.id.startsWith("deleteEntry--")) {
+        const [prefix, id] = event.target.id.split("--")
+
+        deleteEntry(id).then(
+            () => {
+                const updatedEntries = useEntries()
+                render(updatedEntries)
+            }
+        )
+    }
 })

@@ -6,7 +6,7 @@ export const JournalHTMLConverter = (journalObj) => {
             <div class="entry--body">${journalObj.entry}</div>
             <div class="entry--bottom">
                 <div class="entry--mood">Mood: ${journalObj.mood}</div>
-                <button id="deleteNote--${journalObj.id}">Delete</button>
+                <button id="deleteEntry--${journalObj.id}">Delete</button>
             </div>
         </div>
     `
