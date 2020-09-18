@@ -33,13 +33,32 @@ body {
     margin-bottom: 25px;
 }
 
+.entry--bottom {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
 .entry--mood {
     text-align: center;
-    line-height: 50px;
+    line-height: 25px;
     text-transform: uppercase;
     letter-spacing: .1em;
     font-weight: bold;
     color: white;
     background-color: darkslategray;
-    height: 50px;
+    padding: 10px;
+    flex-grow: 8;
+}
+
+.entry button {
+    color: black;
+    background-color: lightgray;
+    border: none;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.entry button:hover {
+    background-color: gray;
 }
