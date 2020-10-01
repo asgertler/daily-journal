@@ -1,6 +1,6 @@
 // renders journal entries to DOM and allows edit and delete
 
-import { getEntries, useEntries, deleteEntry } from './JournalDataProvider.js'
+import { getEntries, useEntries, editEntry, deleteEntry } from './JournalDataProvider.js'
 import { JournalHTMLConverter } from './Journal.js'
 
 const eventHub = document.querySelector("body")
@@ -38,6 +38,7 @@ eventHub.addEventListener("click", event => {
         title.value = entry.title
         body.value = entry.entry
         mood.value = entry.mood
+        entryId.value = entry.id
     }
 })
 

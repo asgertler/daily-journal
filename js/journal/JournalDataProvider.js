@@ -30,15 +30,13 @@ export const saveEntry = entryObj => {
         },
         body: JSON.stringify(entryObj)
     })
-        .then(() => {
-            return getEntries()
-        })
+        .then(getEntries)
         .then(dispatchStateChangeEvent)
 }
 
 export const editEntry = entryObj => {
     return fetch(`http://localhost:8088/entries/${entryObj.id}`, {
-        method: 'PUT',
+        method: 'PATCH',
         headers: {
             'Content-Type': 'application/json'
         },

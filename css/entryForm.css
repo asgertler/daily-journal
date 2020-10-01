@@ -3,12 +3,27 @@
     border-radius: 0;
 }
 
-#entryForm {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-end;
-    background-color: lightgray;
-    margin: 0;
+.modal-content {
+    border: none;
+    border-radius: 0;
+}
+
+#formHeader {
+    color: white;
+    background-color: #17a2b8;
+    border-radius: 0;
+}
+
+#entryTitle {
+    border-radius: 0;
+}
+
+#entryBody {
+    border-radius: 0;
+}
+
+#entryMood {
+    border-radius: 0px;
 }
 
 #saveEntry {

@@ -1,4 +1,4 @@
-import { getEntries, saveEntry } from './JournalDataProvider.js'
+import { editEntry, getEntries, saveEntry } from './JournalDataProvider.js'
 
 const eventHub = document.querySelector("body")
 
@@ -10,12 +10,23 @@ const dispatchStateChangeEvent = () => {
 
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveEntry") {
+        const title = document.getElementById("entryTitle")
+        const body = document.getElementById("entryBody")
+        const mood = document.getElementById("entryMood")
+        const id = document.getElementById('entryId')
 
-        const entryTitle = document.getElementById("entryTitle")
-        const entryBody = document.getElementById("entryBody")
-        const entryMood = document.getElementById("entryMood")
+        if (id.value) {
+            const editedEntry = {
+                title: title.value,
+                entry: body.value,
+                mood: mood.value,
+                id: parseInt(id.value)
+            }
 
-        if (entryTitle.value !== '' && entryBody !== '' && entryMood.value !== '') {
+            editEntry(editedEntry)
+                .then(dispatchStateChangeEvent)
+
+        } else if (entryTitle.value !== '' && entryBody !== '' && entryMood.value !== '') {
             const newEntry = {
                 title: entryTitle.value,
                 date: Date.now(),
@@ -40,7 +51,7 @@ const render = () => {
     const contentTarget = document.querySelector("#entryForm")
 
     contentTarget.innerHTML = `
-    <button type="button" id="formBtn" class="btn btn-info" data-toggle="modal" data-target="#modal">Post a New Entry</button>
+    <button type="button" id="formBtn" class="btn btn-info" data-toggle="modal" data-target="#modal">Post</button>
     
     <section class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
@@ -75,7 +86,9 @@ const render = () => {
                     </form>
                 </div>
             </div>
-        </section>
+        </div>
+
+        <input type="hidden" name="entryId" id="entryId">
     </section>
     `
 }
