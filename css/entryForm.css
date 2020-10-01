@@ -11,33 +11,6 @@
     margin: 0;
 }
 
-#entry--title {
-    flex-basis: 100%;
-    margin-bottom: 10px;
-    border: none;
-    padding: 10px;
-}
-
-#entry--body {
-    flex-basis: 100%;
-    margin-bottom: 10px;
-    border: none;
-    padding: 10px;
-}
-
-#entry--mood {
-    color: white;
-    background-color: rgba(0, 0, 0, .25);
-    border: none;
-    margin-right: 10px;
-    padding: 10px;
-}
-
 #saveEntry {
     border-radius: 0;
-}
-
-#entrySeparator {
-    margin: 25px 0 0 0;
-    border: 1px solid lightgray;
 }

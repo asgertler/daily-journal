@@ -34,7 +34,7 @@ const render = () => {
     const contentTarget = document.querySelector("#entryForm")
 
     contentTarget.innerHTML = `
-    <button type="button" id="formBtn" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Post a New Entry</button><div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <button type="button" id="formBtn" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Post a New Entry</button><div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     
     <section class="modal-dialog" role="document">
         <div class="modal-content">
@@ -64,7 +64,7 @@ const render = () => {
                         </select>
                     </div>
 
-                    <button type="submit" id="saveEntry" class="btn btn-primary">Submit</button>
+                    <button type="submit" id="saveEntry" class="btn btn-info">Submit</button>
                 </form>
             </div>
         </div>

@@ -1,0 +1,73 @@
+#entrySeparator {
+    margin: 25px 0 0 0;
+    border: 1px solid lightgray;
+}
+
+#entryLog {
+    display: flex;
+    flex-flow: column wrap; 
+}
+
+.entry {
+    color: darkslategray;
+    border: 5px solid lightgray;
+    padding: 25px;
+    margin: 25px 0 0 0;
+    -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .5);
+	   -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .5);
+	        box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .5);
+}
+
+.entryH {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.entry h2 {
+    font-size: xx-large;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    margin: 0;
+}
+
+.entry h3 {
+    font-size: x-large;
+}
+
+.entryBody {
+    text-align: justify;
+    margin-bottom: 25px;
+}
+
+.entryBottom {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.entryMood {
+    text-align: center;
+    line-height: 25px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-weight: bold;
+    color: white;
+    background-color: darkslategray;
+    padding: 10px;
+    flex-grow: 8;
+}
+
+.deleteBtn {
+    color: black;
+    background-color: lightgray;
+    border: none;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.deleteBtn:hover {
+    background-color: gray;
+}

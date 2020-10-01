@@ -5,12 +5,14 @@ const eventHub = document.querySelector('body')
 export const JournalHTMLConverter = (journalObj) => {
     return `
         <section class="entry" id="entry--${journalObj.id}">
-            <div class="entry--title"><h2>${journalObj.title}</h2></div>
-            <div class="entry--date"><h3>${new Date(journalObj.date).toLocaleDateString('en-US')}</h3></div>
-            <div class="entry--body">${journalObj.entry}</div>
-            <div class="entry--bottom">
-                <div class="entry--mood">Mood: ${journalObj.mood}</div>
-                <button id="deleteEntry--${journalObj.id}">Delete</button>
+            <div class="entryH">
+                <div class="entryTitle"><h2>${journalObj.title}</h2></div>
+                <div class="entryDate"><h3>${new Date(journalObj.date).toLocaleDateString('en-US')}</h3></div>
+            </div>
+            <div class="entryBody">${journalObj.entry}</div>
+            <div class="entryBottom">
+                <div class="entryMood">Mood: ${journalObj.mood}</div>
+                <button id="deleteEntry--${journalObj.id}" class="deleteBtn">Delete</button>
             </div>
         </section>
     `

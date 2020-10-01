@@ -1,63 +1,10 @@
 @import 'header.css';
 @import 'entryForm.css';
+@import 'journal.css';
 
 body {
     font-family: 'Alata', sans-serif;
-    margin: 0;
+    margin: 0 auto;
     padding: 50px;
-}
-
-#entryLog {
-    display: flex;
-    flex-flow: column wrap; 
-}
-
-.entry {
-    color: darkslategray;
-    border: 5px solid lightgray;
-    padding: 25px;
-    margin: 25px 0 0 0;
-    -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .5);
-	   -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .5);
-	        box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .5);
-}
-
-.entry h2 {
-    text-transform: uppercase;
-    letter-spacing: .05em;
-    margin: 0;
-}
-
-.entry--body {
-    margin-bottom: 25px;
-}
-
-.entry--bottom {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-}
-
-.entry--mood {
-    text-align: center;
-    line-height: 25px;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    font-weight: bold;
-    color: white;
-    background-color: darkslategray;
-    padding: 10px;
-    flex-grow: 8;
-}
-
-.entry button {
-    color: black;
-    background-color: lightgray;
-    border: none;
-    padding: 10px;
-    margin-left: 10px;
-}
-
-.entry button:hover {
-    background-color: gray;
+    max-width: 1200px;
 }
