@@ -15,7 +15,7 @@ eventHub.addEventListener("click", clickEvent => {
         const entryBody = document.getElementById("entryBody")
         const entryMood = document.getElementById("entryMood")
 
-        if (entryMood.value !== "0") {
+        if (entryTitle.value !== '' && entryBody !== '' && entryMood.value !== '') {
             const newEntry = {
                 title: entryTitle.value,
                 date: Date.now(),
@@ -26,10 +26,7 @@ eventHub.addEventListener("click", clickEvent => {
             saveEntry(newEntry)
                 .then(dispatchStateChangeEvent())
 
-        } else {
-            window.alert("Choose a mood!")
         }
-
     }
 })
 
@@ -41,14 +38,14 @@ const render = () => {
     
     <section class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
+            <div id="formHeader" class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">So what's shakin'?</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
 
-            <div class="modal-body">
+            <div id="formBody" class="modal-body">
                 <form>
                     <div class="form-group">
                         <input type="text" class="form-control" id="entryTitle" placeholder="Title" required>
@@ -59,15 +56,15 @@ const render = () => {
                     </div>
 
                     <div class="form-group">
-                        <select class="form-control" id="entryMood">
-                            <option value="0">Please choose a mood...</option>
+                        <select class="form-control" id="entryMood" required>
+                            <option value="">Choose a mood...</option>
                             <option value="happy">Happy</option>
                             <option value="fine">Fine</option>
                             <option value="stressed">Stressed</option>
                         </select>
                     </div>
 
-                    <button type="reset" id="saveEntry" class="btn btn-primary">Submit</button>
+                    <button type="submit" id="saveEntry" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
