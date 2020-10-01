@@ -1,7 +1,7 @@
-import { JournalForm } from './JournalForm.js'
-import { JournaList } from "./JournalEntryList.js"
-import { DateTime } from './DateTime.js'
+import { Header } from './Header.js'
+import { JournalForm } from './journal/JournalForm.js'
+import { JournaList } from "./journal/JournalList.js"
 
+Header()
 JournalForm()
 JournaList()
-DateTime()

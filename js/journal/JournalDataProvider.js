@@ -1,6 +1,8 @@
+// interacts with database
+
 let journal = []
 
-const eventHub = document.querySelector("#eventHub")
+const eventHub = document.querySelector("body")
 
 const dispatchStateChangeEvent = () => {
     const journalStateChangedEvent = new CustomEvent("journalStateChanged")

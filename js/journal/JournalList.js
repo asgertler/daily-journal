@@ -1,11 +1,16 @@
-import { getEntries, useEntries, deleteEntry } from './JournalDataProvider.js'
-import { JournalHTMLConverter } from './JournalEntry.js'
+// renders journal entries to DOM and allows edit and delete
 
-const eventHub = document.querySelector("#eventHub")
-const contentTarget = document.querySelector("#entryLog")
+import { getEntries, useEntries, deleteEntry } from './JournalDataProvider.js'
+import { JournalHTMLConverter } from './Journal.js'
+
+const eventHub = document.querySelector("body")
 
 const render = (entryArr) => {
-    contentTarget.innerHTML = entryArr.map((entryObj) => {
+    const contentTarget = document.querySelector("#entryLog")
+
+    const revEntryArr = entryArr.reverse()
+
+    contentTarget.innerHTML = revEntryArr.map((entryObj) => {
         return JournalHTMLConverter(entryObj)
     }).join("")
 }
