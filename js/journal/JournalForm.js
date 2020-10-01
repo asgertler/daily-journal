@@ -1,14 +1,19 @@
-import { getEntries, useEntries, saveEntry } from './JournalDataProvider.js'
+import { getEntries, saveEntry } from './JournalDataProvider.js'
 
 const eventHub = document.querySelector("body")
-const contentTarget = document.querySelector("#entryForm")
+
+const dispatchStateChangeEvent = () => {
+    const journalStateChangedEvent = new CustomEvent('articleStateChanged')
+
+    eventHub.dispatchEvent(journalStateChangedEvent)
+}
 
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveEntry") {
 
-        const entryTitle = document.querySelector("#entry--title")
-        const entryBody = document.querySelector("#entry--body")
-        const entryMood = document.querySelector("#entry--mood")
+        const entryTitle = document.getElementById("entryTitle")
+        const entryBody = document.getElementById("entryBody")
+        const entryMood = document.getElementById("entryMood")
 
         if (entryMood.value !== "0") {
             const newEntry = {
@@ -19,6 +24,7 @@ eventHub.addEventListener("click", clickEvent => {
             }
 
             saveEntry(newEntry)
+                .then(dispatchStateChangeEvent())
 
         } else {
             window.alert("Choose a mood!")
@@ -28,10 +34,12 @@ eventHub.addEventListener("click", clickEvent => {
 })
 
 const render = () => {
+    const contentTarget = document.querySelector("#entryForm")
+
     contentTarget.innerHTML = `
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Post a New Entry</button><div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <button type="button" id="formBtn" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Post a New Entry</button><div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     
-    <div class="modal-dialog" role="document">
+    <section class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">So what's shakin'?</h5>
@@ -43,11 +51,11 @@ const render = () => {
             <div class="modal-body">
                 <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="entryTitle" placeholder="Title">
+                        <input type="text" class="form-control" id="entryTitle" placeholder="Title" required>
                     </div>
 
                     <div class="form-group">
-                        <textarea class="form-control" id="entryBody" rows="3" placeholder="Talk about what you learned..."></textarea>
+                        <textarea class="form-control" id="entryBody" rows="3" placeholder="Talk about what you learned..." required></textarea>
                     </div>
 
                     <div class="form-group">
@@ -59,11 +67,11 @@ const render = () => {
                         </select>
                     </div>
 
-                    <button type="submit" id="saveEntry" class="btn btn-primary">Submit</button>
+                    <button type="reset" id="saveEntry" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
-    </div>
+    </section>
     `
 }
 

@@ -1,28 +1,20 @@
 // renders header to DOM
 
-// const eventHub = document.querySelector("body")
+const eventHub = document.querySelector("body")
 
 export const Header = () => {
     const contentTarget = document.querySelector("header")
 
     contentTarget.innerHTML = `
     <section id="headerBranding">
-            <div id="logoContainer">
-                <img src="/img/ag-logo_clr.png" alt="Aaron Gertler logo">
-            </div>
+        <div id="logoContainer">
+            <img src="/img/ag-logo_clr.png" alt="Aaron Gertler logo">
+        </div>
 
-            <div>
-                <h1>aaronGertler</h1>
-                <h2>// Web Dev Journal</h2>
-            </div>
-        </section>
-
-        <section id="dateTimeSocial">
-            <div id="dateTime">
-                <p id="date"></p>
-                <p id="time"></p>
-            </div>
-
+        <div id="headerInfo">
+            <h1>aaronGertler</h1>
+            <h2>// Web Dev Journal</h2>
+            
             <div id="socialIcons">
                 <a href="https://github.com/asgertler" target="_blank">
                     <img src="/img/icon-github.png" alt="GitHub Icon">
@@ -35,7 +27,17 @@ export const Header = () => {
                     <img src="/img/icon-linkedin.png" alt="Linkedin Icon">
                 </a>
             </div>
-        </section>
+        </div>
+    </section>
+
+    <section id="dateTimeSocial">
+        <div id="dateTime">
+            <p id="date"></p>
+            <p id="time"></p>
+        </div>
+
+        <div id="entryForm"></div>
+    </section>
     `
 
     const updateDateTime = () => {
