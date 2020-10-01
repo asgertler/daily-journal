@@ -13,13 +13,6 @@
       "entry": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ex nunc, laoreet nec turpis eu, lobortis hendrerit tellus. Sed in nibh at quam facilisis accumsan a non neque. Ut rhoncus nisi augue, eget tempor orci auctor in. Fusce mauris ante, lobortis tincidunt lectus vel, congue suscipit lacus. Cras ultrices tempus neque, vitae porttitor massa ullamcorper sed. Duis mollis tellus venenatis lorem pulvinar maximus. Sed aliquet eros at nunc mollis sollicitudin.",
       "mood": "fine",
       "id": 2
-    },
-    {
-      "title": "Test Post #3",
-      "date": 1600452540587,
-      "entry": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ex nunc, laoreet nec turpis eu, lobortis hendrerit tellus. Sed in nibh at quam facilisis accumsan a non neque. Ut rhoncus nisi augue, eget tempor orci auctor in. Fusce mauris ante, lobortis tincidunt lectus vel, congue suscipit lacus. Cras ultrices tempus neque, vitae porttitor massa ullamcorper sed. Duis mollis tellus venenatis lorem pulvinar maximus. Sed aliquet eros at nunc mollis sollicitudin.",
-      "mood": "stressed",
-      "id": 3
     }
   ]
 }

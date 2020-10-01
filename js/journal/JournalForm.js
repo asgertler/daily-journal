@@ -30,6 +30,13 @@ eventHub.addEventListener("click", clickEvent => {
     }
 })
 
+/*
+eventHub.addEventListener("customEvent", articleStateChanged => {
+    const entryMood = document.getElementById("entryMood")
+    contentTarget = document.querySelector('.entryMood')
+})
+*/
+
 const render = () => {
     const contentTarget = document.querySelector("#entryForm")
 

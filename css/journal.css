@@ -22,7 +22,7 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: top;
     margin-bottom: 15px;
 }
 
@@ -61,13 +61,13 @@
 }
 
 .deleteBtn {
-    color: black;
-    background-color: lightgray;
-    border: none;
+    border-radius: 0;
     padding: 10px;
     margin-left: 10px;
 }
 
-.deleteBtn:hover {
-    background-color: gray;
+.editBtn {
+    border-radius: 0;
+    padding: 10px;
+    margin-left: 10px;
 }

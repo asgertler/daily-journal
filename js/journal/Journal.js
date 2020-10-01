@@ -11,36 +11,10 @@ export const JournalHTMLConverter = (journalObj) => {
             </div>
             <div class="entryBody">${journalObj.entry}</div>
             <div class="entryBottom">
-                <div class="entryMood">Mood: ${journalObj.mood}</div>
-                <button id="deleteEntry--${journalObj.id}" class="deleteBtn">Delete</button>
+                <div id="entryMood--${journalObj.id}" class="entryMood">Mood: ${journalObj.mood}</div>
+                <button id="editEntry--${journalObj.id}" class="btn btn-warning editBtn">✏️</button>
+                <button id="deleteEntry--${journalObj.id}" class="btn btn-danger deleteBtn">🗑️</button>
             </div>
         </section>
     `
 }
-
-/*
-eventHub.addEventListener("customEvent", articleStateChanged => {
-    if (clickEvent.target.id === "saveEntry") {
-
-        const entryTitle = document.getElementById("entryTitle")
-        const entryBody = document.getElementById("entryBody")
-        const entryMood = document.getElementById("entryMood")
-
-        if (entryMood.value !== "0") {
-            const newEntry = {
-                title: entryTitle.value,
-                date: Date.now(),
-                entry: entryBody.value,
-                mood: entryMood.value
-            }
-
-            saveEntry(newEntry)
-                .then(dispatchStateChangeEvent())
-
-        } else {
-            window.alert("Choose a mood!")
-        }
-
-    }
-})
-*/
