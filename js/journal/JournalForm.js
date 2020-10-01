@@ -46,24 +46,21 @@ const render = () => {
                         <input type="text" class="form-control" id="entryTitle" placeholder="Title">
                     </div>
 
-                    
+                    <div class="form-group">
+                        <textarea class="form-control" id="entryBody" rows="3" placeholder="Talk about what you learned..."></textarea>
+                    </div>
 
-                    <input type="text" id="entry--title" placeholder="What concepts did you work on?"></input>
+                    <div class="form-group">
+                        <select class="form-control" id="entryMood">
+                            <option value="0">Please choose a mood...</option>
+                            <option value="happy">Happy</option>
+                            <option value="fine">Fine</option>
+                            <option value="stressed">Stressed</option>
+                        </select>
+                    </div>
 
-                    <textarea id="entry--body" placeholder="Talk about what you learned..." rows="5" cols="50"></textarea>
-                    
-                    <select class="dropdown" id="entry--mood">
-                        <option value="0">Please choose a mood...</option>
-                        <option value="happy">Happy</option>
-                        <option value="fine">Fine</option>
-                        <option value="stressed">Stressed</option>
-                    </select>
+                    <button type="submit" id="saveEntry" class="btn btn-primary">Submit</button>
                 </form>
-            </div>
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" id="saveEntry" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>
