@@ -27,6 +27,21 @@ eventHub.addEventListener("journalStateChanged", () => {
 })
 
 eventHub.addEventListener("click", event => {
+    if (event.target.id.startsWith("editEntry--")) {
+        const [prefix, id] = event.target.id.split('--')
+
+        const entry = useEntries().find(entry => entry.id === parseInt(id))
+        const title = document.querySelector('#entryTitle')
+        const body = document.querySelector('#entryBody')
+        const mood = document.querySelector('#entryMood')
+
+        title.value = entry.title
+        body.value = entry.entry
+        mood.value = entry.mood
+    }
+})
+
+eventHub.addEventListener("click", event => {
     if (event.target.id.startsWith("deleteEntry--")) {
         const [prefix, id] = event.target.id.split("--")
 

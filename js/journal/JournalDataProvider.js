@@ -36,6 +36,18 @@ export const saveEntry = entryObj => {
         .then(dispatchStateChangeEvent)
 }
 
+export const editEntry = entryObj => {
+    return fetch(`http://localhost:8088/entries/${entryObj.id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(entryObj)
+    })
+        .then(getEntries)
+        .then(dispatchStateChangeEvent)
+}
+
 export const deleteEntry = entryId => {
     return fetch(`http://localhost:8088/entries/${entryId}`, {
         method: "DELETE"
